@@ -1,0 +1,17 @@
+
+<div class="index">
+  <h1 id="title">TORONTO <br /> ATTRACTIONS <br /> STORE</h1>
+
+  <% @attractions.each do |attraction| %>
+    <div class="circle">
+      <li><p id= "middle"><%= link_to attraction.title, "/attractions/#{attraction.id}/buy" %></p></li>
+        <li>
+        <p id= "middle">  <%= attraction.location %> -  <%= attraction.price %> dollars</p>
+        </li>
+        <p></p>
+    </div>
+  <% end %>
+  <div class="new">
+    <%=link_to "New Attraction", "/attractions/new" %>
+  </div>
+</div>

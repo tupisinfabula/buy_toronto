@@ -1,0 +1,40 @@
+.index {
+  background-image: url(background-1.jpg);
+  height: 1000px;
+  margin-top: -20px;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-top: 65px;
+}
+
+li #middle {
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+#title {
+  padding: 52px;
+  text-decoration: overline;
+  color: #fff;
+}
+
+.buy {
+  margin: 50px 500px 50px 300px;
+}
+
+.back {
+      margin: 36px 20px 20px 160px;
+}
+
+.new {
+  margin-left: 530px;
+  margin-top: 50px;
+}
+
+.new a {
+  color:white;
+}

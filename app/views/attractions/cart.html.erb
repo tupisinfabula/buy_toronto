@@ -1,0 +1,5 @@
+<h1>Cart</h1>
+Your total for today is: <%= @attraction.price%>....
+<%= link_to "Buy", "/attractions/cart?id=#{@attraction.id}" %>
+
+The <%= @attraction.title %> is yours!
