@@ -2,15 +2,20 @@
 
 
 <h1><%= @attraction.title%></h1>
-<%= image_tag "http://www.perceptivetravel.com/issues/0611/photos/toronto-tower500.jpg"%>
-Price:  <%= @attraction.price%>
-<%= link_to "Buy", "/attractions/cart?id=#{@attraction.id}" %>
+<%= image_tag @attraction.url%>
+Price:  <%= @attraction.price%><br />
+Location: <%= @attraction.location %><br />
+<!-- <%= link_to "Buy", "/attractions/cart?id=#{@attraction.id}" %> -->
 
+<!-- I need form_for when I have to work with an object-->
+<!-- I need form_tag for simple things-->
+<%= form_tag "/attractions/cart?id=#{@attraction.id}" do %>
+  <input value="Buy" type="submit" />
+<% end%>
 
-
-<form method="post" action="/attractions/cart?id=#{@attraction.id}" class="button_to">
+<!-- <form method="post" action="/attractions/cart?id=#{@attraction.id}" class="button_to">
     <input value="Buy" type="submit" />
-   </form>
+</form> -->
 <!-- # => "<form method="post" action="/controller/new" class="button_to">
 #      <input value="New" type="submit" />
 #    </form>" -->
@@ -20,6 +25,7 @@ Price:  <%= @attraction.price%>
 <p>
   <%= link_to "Edit Attraction", "/attractions/#{@attraction.id}/edit" %>
 </p>
-</div>
+<p>
 
-# <!-- )"http://www.perceptivetravel.com/issues/0611/photos/toronto-tower500.jpg" -->
+</p>
+</div>

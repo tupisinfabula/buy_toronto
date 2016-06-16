@@ -31,10 +31,32 @@ li #middle {
 }
 
 .new {
+  height: 40px;
   margin-left: 530px;
   margin-top: 50px;
+  background-color: white;
+  border-radius: 55%;
+  width: 150px;
+  padding-left: 45px;
+  padding-top: 20px
+
 }
 
 .new a {
-  color:white;
+  color:#808080;
+}
+
+.new-center {
+background-image: url(toronto.jpg);
+height: 1000px;
+}
+
+.new-title {
+  color: #ffffff;
+}
+
+.new_attraction {
+  padding: 40px;
+  margin-left: 500px;
+  color: #ffffff;
 }

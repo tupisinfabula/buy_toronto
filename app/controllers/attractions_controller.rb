@@ -29,21 +29,28 @@ class AttractionsController < ApplicationController
     end
   end
 
-  private
-  def attraction_params
-    params.require(:attraction).permit(:title, :location, :url)
-  end
-
   def edit
     @attraction = Attraction.find(params[:id])
   end
 
   def update
     @attraction = Attraction.find(params[:id])
-    if @attraction.update_attribute(attraction_params)
-      redirect_to "/attraction/#{@attraction}.id"
+    if @attraction.update_attributes(attraction_params)
+      redirect_to "/attractions/#{@attraction.id}/buy"
     else
       render :edit
     end
   end
+
+  def destroy
+    @attraction = Attraction.find(params[:id])
+    @attraction.destroy
+    redirect_to attractions_url
+  end
+
+  private
+  def attraction_params
+    params.require(:attraction).permit(:title, :location, :url, :price)
+  end
+
 end

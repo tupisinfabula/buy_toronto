@@ -1,17 +1,22 @@
-<h1>Add New Attraction</h1>
-
-<%= form_for @attraction do |a| %>
-  <p>
-    <%= a.label :title %><br>
-    <%= a.text_field :title %>
-  </p>
-  <p>
-    <%= a.label :location %><br>
-    <%= a.text_field :location %>
-  </p>
-  <p>
-    <%= a.label :url %><br>
-    <%= a.text_field :url %>
-  </p>
-  <%= a.submit "SAVE"%>
-<% end %>
+<div class="new-center">
+<h1 class= "new-title">Add New Attraction</h1>
+  <%= form_for @attraction do |a| %>
+    <p>
+      <%= a.label :title %><br>
+      <%= a.text_field :title %>
+    </p>
+    <p>
+      <%= a.label :location %><br>
+      <%= a.text_field :location %>
+    </p>
+    <p>
+      <%= a.label :price %><br>
+      <%= a.text_field :price %>
+    </p>
+    <p>
+      <%= a.label :url %><br>
+      <%= a.text_field :url %>
+    </p>
+    <%= a.submit "SAVE"%>
+  <% end %>
+</div>
